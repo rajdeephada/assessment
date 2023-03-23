@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{
+            background: skyblue;
+        }
+        .main{
+            height: 600px;
+            width: 450px;
+            /* border: 1px solid #000; */
+            margin: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: 4px 4px 0 gray;
+        }
+        .main .top{
+            height: 200px;
+            background: white;
+
+        }
+        .top .one{
+            padding: 20px;
+        }
+        .top .two{
+            text-align: right;
+            padding: 20px 5px;
+            font-size: 25px;
+        }
+        .top .three{
+            text-align: right;
+            padding: 20px 05px;
+            font-size: 25px;
+        }
+
+        /* bottom part start  */
+
+        .main .bottom{
+            height: 400px;
+            /* background: maroon; */
+        }
+        .bottom .left{
+            width: 80%;
+            height: 100%;
+            float: left;
+            background: black;
+        }
+        .bottom .right{
+            float: left;
+            width: 20%;
+            height: 100%;
+            background:rgba(0,0,0,0.8);
+        }
+        .left{
+            display: grid;
+            border: 1px solid #000;
+            grid-template-columns: 1fr 1fr 1fr;
+
+        }
+        .left .x{
+            border: 1px solid #000;
+            text-align: center;
+            padding-top: 30%;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+        .right{
+            display: grid;
+            /* grid-template-columns: 1fr ; */
+        }
+        .right .y{
+            text-align: center;
+            padding-top: 30%;
+            color: white;
+            font-size: 22px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="top">
+            <div class="one">DEG</div>
+            <div class="two"><h2>123x5</h2></div>
+            <div class="three">615</div>
+        </div>
+        <div class="bottom">
+            <div class="left">
+                <div class="x">7</div>
+                <div class="x">8</div>
+                <div class="x">9</div>
+                <div class="x">4</div>
+                <div class="x">5</div>
+                <div class="x">6</div>
+                <div class="x">1</div>
+                <div class="x">2</div>
+                <div class="x">3</div>
+                <div class="x">.</div>
+                <div class="x">0</div>
+                <div class="x">=</div>
+            </div>
+            <div class="right">
+                <div class="y">DEL</div>
+                <div class="y">&div;</div>
+                <div class="y">X</div>
+                <div class="y">-</div>
+                <div class="y">+</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
