@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Image Gallery with Popup</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .thumbnail {
+            cursor: pointer;
+            margin:5px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Image Gallery with Popup</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="01.jpg" alt="Image 1" class="img-thumbnail thumbnail" data-toggle="modal"
+                    data-target="#myModal" data-image="01.jpg" data-caption="Image 1">
+            </div>
+            <div class="col-md-4">
+                <img src="02.jpg" alt="Image 2" class="img-thumbnail thumbnail" data-toggle="modal"
+                    data-target="#myModal" data-image="02.jpg" data-caption="Image 2">
+            </div>
+            <div class="col-md-4">
+                <img src="03.jpg" alt="Image 3" class="img-thumbnail thumbnail" data-toggle="modal"
+                    data-target="#myModal" data-image="03.jpg" data-caption="Image 3">
+            </div>
+            <div class="col-md-4">
+                <img src="04.jpg" alt="Image 3" class="img-thumbnail thumbnail" data-toggle="modal"
+                    data-target="#myModal" data-image="04.jpg" data-caption="Image 4">
+            </div>
+            <div class="col-md-4">
+                <img src="05.jpg" alt="Image 3" class="img-thumbnail thumbnail" data-toggle="modal"
+                    data-target="#myModal" data-image="05.jpg" data-caption="Image 5">
+            </div>
+            <div class="col-md-4">
+                <img src="06.jpg" alt="Image 3" class="img-thumbnail thumbnail" data-toggle="modal"
+                    data-target="#myModal" data-image="06.jpg" data-caption="Image 6">
+            </div>
+            <div class="col-md-4">
+                <img src="07.jpg" alt="Image 3" class="img-thumbnail thumbnail" data-toggle="modal"
+                    data-target="#myModal" data-image="07.jpg" data-caption="Image 7">
+            </div>
+            <div class="col-md-4">
+                <img src="08.jpg" alt="Image 3" class="img-thumbnail thumbnail" data-toggle="modal"
+                    data-target="#myModal" data-image="08.jpg" data-caption="Image 8">
+            </div>
+            <div class="col-md-4">
+                <img src="09.jpg" alt="Image 3" class="img-thumbnail thumbnail" data-toggle="modal"
+                    data-target="#myModal" data-image="09.jpg" data-caption="Image 9">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        $(document).ready(function () {
+            $('.thumbnail').on('click', function () {
+                var image = $(this).data('image');
+                var caption = $(this).data('caption');
+                $('#myModalLabel').text(caption);
+                $('#myModal img').attr('src', image);
+            });
+        });
+    </script>
+</body>
+
+</html>
